@@ -22,7 +22,6 @@
       position: relative;
     }
 
-    /* Fondo animado Canvas */
     canvas {
       position: fixed;
       top: 0;
@@ -71,7 +70,6 @@
       animation: fadeIn 0.8s ease-in-out;
     }
 
-    /* Botón */
     .btn {
       background: linear-gradient(135deg, #ffd700, #ffa500);
       color: #333;
@@ -91,7 +89,6 @@
       box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
     }
 
-    /* Contenedor central */
     .photo-sunflower-container {
       position: relative;
       width: 100%;
@@ -101,7 +98,6 @@
       align-items: center;
     }
 
-    /* GIRASOLES QUE FLOTAN ALREDEDOR DE LA FOTO Y PALABRAS (DURA 15 SEGUNDOS) */
     .floating-sunflower {
       position: absolute;
       font-size: 2.2rem;
@@ -180,7 +176,6 @@
       display: block;
     }
 
-    /* Red de girasoles con mensajes */
     .sunflowers-grid {
       display: flex;
       flex-direction: column;
@@ -265,7 +260,6 @@
 
       <div class="photo-sunflower-container">
         
-        <!-- GIRASOLES FLOTANTES EN ANIMACIÓN DE 15s -->
         <span class="floating-sunflower sf-1">🌻</span>
         <span class="floating-sunflower sf-2">🌻</span>
         <span class="floating-sunflower sf-3">🌻</span>
@@ -273,12 +267,10 @@
         <span class="floating-sunflower sf-5">🌻</span>
         <span class="floating-sunflower sf-6">🌻</span>
 
-        <!-- RECUADRO DE FOTO: Carga exactamente imag.jpg -->
         <div class="photo-frame">
           <img src="imag.jpg" alt="Foto especial">
         </div>
 
-        <!-- GIRASOLES CON MENSAJES ALREDEDOR -->
         <div class="sunflowers-grid">
           
           <div class="sunflower-item">
@@ -322,7 +314,6 @@
   </div>
 
   <script>
-    // Navegación entre la portada y el detalle
     function goToStep(stepNumber) {
       document.querySelectorAll('.step').forEach(step => {
         step.classList.remove('active');
@@ -330,7 +321,6 @@
       document.getElementById('step' + stepNumber).classList.add('active');
     }
 
-    // Animación de flores y pétalos flotantes en el fondo
     const canvas = document.getElementById('flowerCanvas');
     const ctx = canvas.getContext('2d');
 
@@ -374,7 +364,6 @@
         ctx.rotate(this.angle);
         ctx.globalAlpha = this.opacity;
 
-        // Pétalos del girasol
         ctx.fillStyle = '#ffcc00';
         for (let i = 0; i < this.petals; i++) {
           ctx.beginPath();
@@ -383,7 +372,6 @@
           ctx.fill();
         }
 
-        // Centro marrón del girasol
         ctx.beginPath();
         ctx.arc(0, 0, this.size / 1.8, 0, Math.PI * 2);
         ctx.fillStyle = '#5c3a21';
@@ -404,7 +392,7 @@
       requestAnimationFrame(animate);
     }
 
-
+    animate();
   </script>
 </body>
 </html>
