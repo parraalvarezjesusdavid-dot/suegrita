@@ -37,7 +37,7 @@
       position: relative;
       z-index: 2;
       background: rgba(255, 255, 255, 0.94);
-      padding: 2rem 1.5rem;
+      padding: 2.5rem 1.8rem;
       border-radius: 24px;
       box-shadow: 0 15px 35px rgba(212, 160, 23, 0.25);
       backdrop-filter: blur(8px);
@@ -51,21 +51,14 @@
 
     h1 {
       color: #d4a017;
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: 2.2rem;
+      margin-bottom: 0.8rem;
     }
 
     .subtitle {
       color: #b38600;
-      font-size: 1.1rem;
+      font-size: 1.25rem;
       font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-
-    .tagline {
-      color: #8c6d13;
-      font-size: 0.95rem;
-      font-style: italic;
       margin-bottom: 1.5rem;
     }
 
@@ -83,7 +76,7 @@
       background: linear-gradient(135deg, #ffd700, #ffa500);
       color: #333;
       border: none;
-      padding: 12px 26px;
+      padding: 12px 28px;
       font-size: 1rem;
       font-weight: bold;
       border-radius: 50px;
@@ -98,7 +91,7 @@
       box-shadow: 0 6px 20px rgba(255, 165, 0, 0.6);
     }
 
-    /* Contenedor central con la foto y los girasoles alrededor */
+    /* Contenedor central con la foto */
     .photo-sunflower-container {
       position: relative;
       width: 100%;
@@ -109,8 +102,8 @@
     }
 
     .photo-frame {
-      width: 200px;
-      height: 200px;
+      width: 220px;
+      height: 220px;
       border-radius: 50%;
       border: 5px solid #ffd700;
       box-shadow: 0 8px 25px rgba(0,0,0,0.15);
@@ -140,7 +133,7 @@
       background: #fffdf0;
       border: 2px solid #ffe066;
       border-radius: 16px;
-      padding: 0.8rem 1rem;
+      padding: 0.9rem 1.1rem;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -201,8 +194,7 @@
     <!-- PASO 1: PORTADA -->
     <div id="step1" class="step active">
       <h1>🌻 ¡Muchas Gracias! 🌻</h1>
-      <div class="subtitle">Con todo mi cariño para mi Suegra</div>
-      <div class="tagline">"Usted tampoco es espectadora, ¡no hay plata pero sobra ingenio y agradecimiento! ✨"</div>
+      <div class="subtitle">Un mensaje muy especial hecho con todo mi cariño para usted</div>
       <button class="btn" onclick="goToStep(2)">Ver detalle especial 💛</button>
     </div>
 
@@ -211,9 +203,9 @@
       <h1>🌻 La Estimo Mucho 🌻</h1>
 
       <div class="photo-sunflower-container">
-        <!-- RECUADRO DE FOTO -->
+        <!-- RECUADRO DE FOTO: Carga exactamente imag.jpg -->
         <div class="photo-frame">
-          <img src="suegra.jpg" alt="Foto para mi suegra" onerror="this.onerror=null; this.src='images.jpg';">
+          <img src="imag.jpg" alt="Foto especial">
         </div>
 
         <!-- GIRASOLES CON MENSAJES ALREDEDOR -->
@@ -231,7 +223,7 @@
             <span class="sunflower-icon">🌻</span>
             <div class="sunflower-text">
               <strong>Bienvenida Cálida:</strong>
-              Muchas gracias por abrirme las puertas de su casa y hacerme sentir siempre en familia.
+              Muchas gracias por abrirme las puertas de su casa y hacerme sentir siempre bienvenido.
             </div>
           </div>
 
@@ -239,7 +231,7 @@
             <span class="sunflower-icon">🌻</span>
             <div class="sunflower-text">
               <strong>Consentimiento Único:</strong>
-              Gracias por consentirme tanto cada vez que estoy ahí, sus atenciones valen oro.
+              Gracias por consentirme tanto cada vez que estoy ahí, sus atenciones valen mucho.
             </div>
           </div>
 
@@ -247,14 +239,14 @@
             <span class="sunflower-icon">🌻</span>
             <div class="sunflower-text">
               <strong>Girasoles de Gratitud:</strong>
-              Le dedico este detalle lleno de flores amarillas y buenos deseos. ¡Es la mejor!
+              Le dedico este detalle lleno de flores amarillas y muy buenos deseos. ¡Es la mejor!
             </div>
           </div>
 
         </div>
       </div>
 
-      <div class="final-note">¡Gracias por su generosidad y por consentirme siempre! 💛</div>
+      <div class="final-note">¡Gracias por su generosidad y atenciones siempre! 💛</div>
     </div>
 
   </div>
@@ -342,6 +334,10 @@
       requestAnimationFrame(animate);
     }
 
+    animate();
+  </script>
+</body>
+</html>
     animate();
   </script>
 </body>
